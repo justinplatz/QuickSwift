@@ -30,24 +30,24 @@ PODS:
     - CocoaLumberjack/Default
   - PubNub (4.0):
     - AFNetworking (~> 2.5)
-    - CocoaLumberjack (~> 2.0)
+    - CocoaLumberjack (= 2.0.0)
 
 DEPENDENCIES:
-  - PubNub (from `https://github.com/pubnub/objective-c.git`, branch `4.0b2`)
+  - PubNub (from `https://github.com/pubnub/objective-c.git`, branch `4.0b3`)
 
 EXTERNAL SOURCES:
   PubNub:
-    :branch: 4.0b2
+    :branch: 4.0b3
     :git: https://github.com/pubnub/objective-c.git
 
 CHECKOUT OPTIONS:
   PubNub:
-    :commit: 1767353cb70af4753f84c0dada05254c345d03ab
+    :commit: 01ce9c6264d0d68ab955d02eccc1b5bb5765d0ea
     :git: https://github.com/pubnub/objective-c.git
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
-  PubNub: 5a9b0845783c4d4f844d205f0fd02c586de862eb
+  PubNub: 9044ccad072dea39c0b8423ec405c5692bc8cf87
 
 COCOAPODS: 0.36.0
