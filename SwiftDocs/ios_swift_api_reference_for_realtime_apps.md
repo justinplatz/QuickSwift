@@ -34,10 +34,10 @@ Add Channel to a channel group
             }
             // Request processing failed.
             else{
-                // Handle channels list modificatoin for group error. Check 'category' property
+                // Handle channels list modification for group error. Check 'category' property
                 // to find out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         })
         
@@ -75,7 +75,7 @@ Add Push Notifications On Channels:
                 // Handle modification error. Check 'category' property to find out possible issue because
         		// of which request did fail.
         		//
-        		// Request can be resent using: [status retry];
+        		// Request can be resent using: status.retry()
             }
         })
         
@@ -139,7 +139,7 @@ Returning state information
                 // Handle client state audit error. Check 'category' property to find out possible
                 // issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         })
         
@@ -196,7 +196,7 @@ To do `Global Here Now` you can use the following method(s) in the Swift SDK
                 // Handle presence audit error. Check 'category' property to find out possible issue because
                 // of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
         
@@ -266,7 +266,7 @@ Get a list of UUIDs subscribed to a channel:
                 // Handle presence audit error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
         
@@ -298,7 +298,7 @@ The `hereNowForChannel` function returns a list of UUIDs currently subscribed to
                 // Handle presence audit error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         })
         
@@ -349,7 +349,7 @@ Example Response:
                 // Handle presence audit error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         })
         
@@ -379,7 +379,7 @@ You can return the list of `UUIDs` and `occupancy` for all `channels` by omittin
        			// Handle presence audit error. Check 'category' property to find out possible issue because
        			// of which request did fail.
        			//
-       			// Request can be resent using: [status retry];
+       			// Request can be resent using: status.retry()
     		}
       })
         
@@ -426,7 +426,7 @@ You can return only the occupancy information by omitting channel and setting uu
        			// Handle presence audit error. Check 'category' property to find out possible issue because
        			// of which request did fail.
        			//
-       			// Request can be resent using: [status retry];
+       			// Request can be resent using: status.retry()
     		}
       })
         
@@ -506,7 +506,7 @@ Here Now for Channel Groups:
                 // Handle presence audit error. Check 'category' property to find out possible issue because
                 // of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         })
         
@@ -638,7 +638,7 @@ Retrieve the last 100 messages on a channel:
                 // Handle message history download error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
         
@@ -669,7 +669,7 @@ Use `historyForChannel` to retrieve the three oldest messages by retrieving from
                 // Handle message history download error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
 
@@ -697,7 +697,7 @@ Use `historyForChannel` to retrieve messages newer than a given time token by pa
                 // Handle message history download error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
         
@@ -725,8 +725,7 @@ Use `historyForChannel` to retrieve messages until a given time token by paging 
                 // Handle message history download error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
-            }
+                // Request can be resent using: status.retry()            }
         }
         
 ####Response
@@ -760,7 +759,7 @@ Paging History Responses:
                 // Handle message history download error. Check 'category' property to find
                 // out possible issue because of which request did fail.
                 //
-                // Request can be resent using: [status retry];
+                // Request can be resent using: status.retry()
             }
         }
     }
