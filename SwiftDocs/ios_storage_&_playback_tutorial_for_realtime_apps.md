@@ -136,7 +136,31 @@ As illustrated, paging with the default `reverse` as `YES` pages 2 at-a-time sta
 
 To pull from a slice of time, just include both `start` and `end` attributes:
  
- `TODO`
+	    let calendar = NSCalendar.currentCalendar()
+        let twoDaysAgo = calendar.dateByAddingUnit(.CalendarUnitDay, value: -2, toDate: NSDate(), options: nil)
+        var now = NSDate()
+        now.timeIntervalSinceReferenceDate
+        client.historyForChannel("my_channel", start: twoDaysAgo?.timeIntervalSinceReferenceDate , end: now.timeIntervalSinceReferenceDate, limit: 100) { (result, status) -> Void in
+            // Check whether request successfully completed or not.
+            if (!status.error) {
+                
+                // Handle downloaded history using:
+                //   result.data.start - oldest message time stamp in response
+                //   result.data.end - newest message time stamp in response
+                //   result.data.messages - list of messages
+                
+                print(result.data.messages)
+            }
+                // Request processing failed.
+            else {
+                
+                // Handle message history download error. Check 'category' property to find
+                // out possible issue because of which request did fail.
+                //
+                // Request can be resent using: status.retry()
+            }
+ 
+        }
  
 ####CONVERTING FROM TIMETOKENS TO UNIXTIME
 
