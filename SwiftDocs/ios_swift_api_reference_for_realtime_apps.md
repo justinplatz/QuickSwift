@@ -1031,7 +1031,9 @@ Subscribe to real-time Presence events, such as `join`, `leave`, and `timeout`, 
 
 `Requires that the `Presence` add-on is enabled for your key. How do I enable add-on features for my keys? - see [http://www.pubnub.com/knowledge-base/discussion/644/how-do-i-enable-add-on-features-for-my-keys]`
 
-
+	
+ 	var client : PubNub
+    var config : PNConfiguration
 
     override init() {
         config = PNConfiguration(publishKey: "Demo", subscribeKey: "Demo")
@@ -1105,7 +1107,9 @@ Retrieve published messages from archival storage:
 #####Unsubscribe
 Stop subscribing (listening) to a channel.
 
-
+	
+ 	var client : PubNub
+    var config : PNConfiguration
 
 	override init() {
         config = PNConfiguration(publishKey: "Demo", subscribeKey: "Demo")
